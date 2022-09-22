@@ -31,7 +31,7 @@
 `/librepremium user premium <name>`   
 启用自动登录（需要librepremium.user.premium权限）  
 `/librepremium user cracked <name>`   
-禁用自动登录并切换为破解模式（需要librepremium.user.cracked权限） 
+禁用自动登录并切换为破解模式（需要librepremium.user.cracked权限）   
 `/librepremium user register <name> <password>`   
 指定一个用户名和密码注册（需要librepremium.user.register权限）  
 `/librepremium user login <name>`   
