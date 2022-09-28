@@ -1,4 +1,4 @@
-# 有用的东西
+# 有用的玩意
 ## 配置文件
 **此配置文件部分内容可能与实际内容不一致**  
 *中文版配置文件仅供参考，以英文页面内容为准。*  
@@ -145,10 +145,10 @@ error-password-wrong="错误的密码。"
 error-player-authorized="此玩家已授权！"
 # 当玩家尝试与未注册玩家进行相关的操作时提示的内容。
 error-player-not-registered="此玩家未注册！"
-# 当玩家尝试与在线玩家进行相关的操作时提示的内容。
-error-player-offline="此玩家在线！"
 # 当玩家尝试与离线玩家进行相关的操作时提示的内容。
-error-player-online="此玩家离线！"
+error-player-offline="此玩家目前处于离线状态！"
+# 当玩家尝试与在线玩家进行相关的操作时提示的内容。
+error-player-online="此玩家目前处于离线状态！"
 # 当服务器触及Mojang API限制（600次请求/10分钟）时对玩家提示的内容
 error-premium-throttled="服务器已经触发Mojang API限制，请稍后再试"
 # 当与Mojang API连接时出现问题，我们无法验证玩家是否为正版。
