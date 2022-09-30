@@ -62,16 +62,16 @@ spawn:
   keep-spawn-loaded:  false
 ```
 这个例子简单的介绍了一下继承的概念。对于目前我们更改的每一个世界，以下列表是正在应用的实际配置：  
-| 配置文件的值                                                 | world  | world_nether | world_the_end | resource_world |
-| ----------------------------------------------------------- | ------ | ------------ | ------------- | -------------- |
-| `entities.spawning.spawn-limits.ambient`                    | `15`   | `15`         | `15`          | `15`           |
-| `entities.spawning.spawn-limits.axolotls`                   | `5`    | `5`          | `5`           | `8`            |
-| `entities.spawning.spawn-limits.creature`                   | `10`   | `10`         | `10`          | `15`           |
-| `entities.spawning.spawn-limits.monster`                    | `70`   | `90`         | `70`          | `2`            |
-| `entities.spawning.spawn-limits.underground_water_creature` | `5`    | `5`          | `5`           | `5`            |
-| `entities.spawning.spawn-limits.water_ambient`              | `20`   | `20`         | `20`          | `20`           |
-| `entities.spawning.spawn-limits.water_creature`             | `5`    | `5`          | `5`           | `5`            |
-| `spawn.keep-spawn-loaded`                                   | `true` | `true`       | `true`        | `false`        |
-
+| 配置文件的值                                                 | world  | world_nether | world_the_end | resource_world |  
+| ----------------------------------------------------------- | ------ | ------------ | ------------- | -------------- |  
+| `entities.spawning.spawn-limits.ambient`                    | `15`   | `15`         | `15`          | `15`           |  
+| `entities.spawning.spawn-limits.axolotls`                   | `5`    | `5`          | `5`           | `8`            |  
+| `entities.spawning.spawn-limits.creature`                   | `10`   | `10`         | `10`          | `15`           |  
+| `entities.spawning.spawn-limits.monster`                    | `70`   | `90`         | `70`          | `2`            |  
+| `entities.spawning.spawn-limits.underground_water_creature` | `5`    | `5`          | `5`           | `5`            |  
+| `entities.spawning.spawn-limits.water_ambient`              | `20`   | `20`         | `20`          | `20`           |  
+| `entities.spawning.spawn-limits.water_creature`             | `5`    | `5`          | `5`           | `5`            |  
+| `spawn.keep-spawn-loaded`                                   | `true` | `true`       | `true`        | `false`        |  
+  
 值得注意的是，`world_the_end`的值没有被更改过。所以，它继承了 `config/paper-world-defaults.yml` 中的所所有值。
 而且，`resource_world/paper-world.yml` 只禁用了 `keep-spawn-loaded`，因为在 `config/paper-world-defaults.yml` 中，该项是启用的。  
