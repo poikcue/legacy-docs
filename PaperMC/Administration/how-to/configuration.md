@@ -62,7 +62,7 @@ spawn:
   keep-spawn-loaded:  false
 ```
 这个例子简单的介绍了一下继承的概念。对于目前我们更改的每一个世界，以下列表是正在应用的实际配置：  
-| 配置文件的值                                           | world  | world_nether | world_the_end | resource_world |
+| 配置文件的值                                                 | world  | world_nether | world_the_end | resource_world |
 | ----------------------------------------------------------- | ------ | ------------ | ------------- | -------------- |
 | `entities.spawning.spawn-limits.ambient`                    | `15`   | `15`         | `15`          | `15`           |
 | `entities.spawning.spawn-limits.axolotls`                   | `5`    | `5`          | `5`           | `8`            |
