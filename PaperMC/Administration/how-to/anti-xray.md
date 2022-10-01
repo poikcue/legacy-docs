@@ -28,7 +28,7 @@ Paper 使用基于混淆处理的反矿物透视，提供两种模式。可以�
 ### `engine-mode: 1`
 主世界：  
 请使用以下内容来替代掉 `paper-world-defaults.yml` 中的 `anticheat.anti-xray` 键。  
-```yaml title="paper-world-defaults.yml"
+```yaml
 anticheat:
   anti-xray:
     enabled: true
@@ -69,7 +69,7 @@ anticheat:
 ```
 下界：  
 复制到地狱文件夹中的`paper-world.yml`。具体请见左侧的配置文件指南。  
- ```yml title="world_nether/paper-world.yml"
+```yaml
 anticheat:
   anti-xray:
     hidden-blocks:
@@ -81,7 +81,7 @@ anticheat:
 
 末地：  
 复制到末地文件夹中的`paper-world.yml`。具体请见左侧的配置文件指南。  
-```yml title="world_the_end/paper-world.yml"
+```yaml
 anticheat:
   anti-xray:
     enabled: false
@@ -90,7 +90,7 @@ anticheat:
 ### `engine-mode: 2`
 主世界：  
 请使用以下内容来替代掉 `paper-world-defaults.yml` 中的 `anticheat.anti-xray` 键。  
-```yaml title="paper-world-defaults.yml"
+```yaml
 anticheat:
   anti-xray:
     enabled: true
@@ -145,7 +145,7 @@ anticheat:
 
 下界：  
 复制到地狱文件夹中的`paper-world.yml`。具体请见左侧的配置文件指南。    
- ```yml title="world_nether/paper-world.yml"
+```yaml
 anticheat:
   anti-xray:
     hidden-blocks:
@@ -170,7 +170,7 @@ anticheat:
 ```
 末地：  
 复制到末地文件夹中的`paper-world.yml`。具体请见左侧的配置文件指南。    
-```yml title="world_the_end/paper-world.yml"
+```yaml
 anticheat:
   anti-xray:
     enabled: false
