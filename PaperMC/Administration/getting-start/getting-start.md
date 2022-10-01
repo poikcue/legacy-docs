@@ -4,7 +4,7 @@
 > 注意：  
 > 随着1.18版本的发布，Paper现在需要**Java17**才能正常运行。如果你还没有使用Java17，请下载它。  
 
-![表格](https://i.postimg.cc/3JxNhC3X/QQ-20221001165655.png)
+![[表格](https://i.postimg.cc/3JxNhC3X/QQ-20221001165655.png)
 
 ## 迁移存档到Paper
 ### 从Vanilla（原版）迁移：
