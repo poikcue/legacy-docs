@@ -62,7 +62,8 @@ spawn:
   keep-spawn-loaded:  false
 ```
 这个例子简单的介绍了一下继承的概念。对于目前我们更改的每一个世界，以下列表是正在应用的实际配置：  
-![表格](https://i.postimg.cc/rwgvkxFr/QQ-20221001165907.png)
+![表格](https://i.postimg.cc/rwgvkxFr/QQ-20221001165907.png)  
+(如果图片很小，请右键选择在新窗口打开图片。)  
   
 值得注意的是，`world_the_end`的值没有被更改过。所以，它继承了 `config/paper-world-defaults.yml` 中的所所有值。
 而且，`resource_world/paper-world.yml` 只禁用了 `keep-spawn-loaded`，因为在 `config/paper-world-defaults.yml` 中，该项是启用的。  
