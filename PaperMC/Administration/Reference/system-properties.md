@@ -1,5 +1,10 @@
 # Paper System Properties
 
+> **阅读前提醒**  
+> 我不是一名Java开发者。以下的所有涉及Java或者其它术语我都不是很清楚。  
+> 因此我并不是很推荐阅读此页文档。如果你是开发人员，请阅读 [Paper System Properties](https://docs.papermc.io/paper/reference/system-properties)  
+> 以了解。
+
 这些系统配置可以在启动服务器之前就可以为不同项进行配置。
 
 > **小心！**  
