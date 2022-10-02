@@ -59,7 +59,7 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### Paper.DisableClassPrioritization:
 
 - **默认值**: `unset`
-- **描述**: 禁用类优先级系统。主要解决relocate和shade的问题。
+- **描述**: 禁用类优先级系统，用于解决relocate和shade失败的问题。
 
 #### Paper.disableFlushConsolidate:
 
