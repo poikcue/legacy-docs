@@ -20,8 +20,8 @@ spawn:
 在配置文件中，默认只有 `_version` 的值。要通过添加一个值来默认配置，需要从 `paper-world-defaults.yml` 中复制对应值过来，然后修改。  
 
 ### 继承
-所有没有明确定义的世界的选项都将保持 `paper-world-defaults.yml` 中的默认配置。  
-也就是说，如果想要修改所有世界的默认配置无需机械化的复制、粘贴到每个文件夹里。  
+所有没有明确定义的世界的选项都将使用 `paper-world-defaults.yml` 中的默认配置。  
+也就是说，如果想要修改所有世界的默认配置，你无需机械化的复制、粘贴到每个文件夹里。  
 也无需将想要修改的值从 `paper-world-defaults.yml` 挨个复制过来然后粘贴到所有 `paper-world.yml` 文件中。    
 只需要复制你想要为某个世界专门定制的选项到对应的 `paper-world.yml` 文件中，然后进行精确的修改即可。    
 这有个更加复杂的例子：在两个世界中分别修改 `spawn-limits` 值和 `keep-spawn-loaded` 值。  
