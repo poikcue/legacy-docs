@@ -29,7 +29,7 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### paper.playerconnection.keepalive:
 
 - **默认值**: `30`
-- **描述**: 以秒为单位，超时多长时间后关闭连接。
+- **描述**: 当接收不到玩家心跳包后，多长时间断开连接。
 
 #### timings.bypassMax:
 
