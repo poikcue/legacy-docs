@@ -1,4 +1,4 @@
-# Paper 系统配置
+# Paper System Properties
 
 这些系统配置可以在启动服务器之前就可以为不同项进行配置。
 
@@ -24,7 +24,7 @@ java -Dpaper.log-level=FINE -jar paper.jar
 > 当一个系统配置项的状态为 `unset` 时，更改为 `true` 就可以用它了。
 
 
-## 系统配置列表
+## Properties 列表
 
 #### paper.playerconnection.keepalive:
 
