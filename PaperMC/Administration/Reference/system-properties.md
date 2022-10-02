@@ -34,7 +34,7 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### timings.bypassMax:
 
 - **默认值**: `unset`
-- **描述**: 允许绕过 Aikar 的 Timings API 的最大数据限制。仅在服务器上启用此项将无法绕过，除非 API 更改为允许绕过。
+- **描述**: 允许绕过 Aikar 的 Timings API 的最大数据限制。除非 API 设定为允许绕过，否则仅在服务器使用此参数是无效的。
 
 #### LetMeReload:
 
