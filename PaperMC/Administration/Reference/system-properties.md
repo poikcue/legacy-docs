@@ -3,13 +3,13 @@
 > **阅读前提醒**  
 > 我不是一名Java开发者。以下的所有涉及Java或者其它术语我都不是很清楚。  
 > 因此我并不是很推荐阅读此页文档。如果你是开发人员，请阅读 [Paper System Properties](https://docs.papermc.io/paper/reference/system-properties)  
-> 以了解。
+> 以了解。对于完全不确定的翻译，下面有原文。
 
 这些系统配置可以在启动服务器之前就可以为不同项进行配置。
 
 > **小心！**  
-> 修改参数可以修改Java程序的工作方式。Paper服务器也不例外。    
-> 如果你对某个参数不了解，**不要轻易使用它**！  
+> 为JVM设定可以更改其工作方式，Paper服务器也不例外。    
+> 如果你不确定某个Flag的作用，**不要轻易使用它**！  
 
 ## 工作原理
 
@@ -23,10 +23,11 @@ java -Dpaper.log-level=FINE -jar paper.jar
 > 在使用Windows Powershell时，需要拿双引号把它裹上。  
 > 比如 `"-Dpaper.log-level=FINE"`
 
-这里的 `-D` 用于设置环境变量，而系统环境变量是带着 `FINE` 值的 `paper.log-level`。除此之外，仅需要加入到启动命令中即可。
+这里的 `-D` 用于设置环境属性，而系统属性则是带着 `FINE` 值的 `paper.log-level`。  
+要使用，仅需将其加入到启动命令中即可。
 
 > **注意**
-> 当一个系统配置项的状态为 `unset` 时，更改为 `true` 就可以用它了。
+> 当一个系统属性的状态为 `unset` 时，更改为 `true` 就可以用它了。
 
 
 ## Properties 列表
@@ -39,32 +40,34 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### timings.bypassMax:
 
 - **默认值**: `unset`
-- **描述**: 允许绕过 Aikar 的 Timings API 的最大数据限制。除非 API 设定为允许绕过，否则仅在服务器使用此参数是无效的。
+- **描述**: 允许绕过Aikar的Timings API的最大数据限制。除非API更改为允许绕过，否则仅在服务器更改是无效的。
 
 #### LetMeReload:
 
 - **默认值**: `unset`
-- **描述**: 当输入 `reload` 时禁用确认重载文本。
+- **描述**: 当输入 `/reload` 命令时禁用确认重载文本。
 
 #### paper.disableChannelLimit:
 
 - **默认值**: `unset`
-- **描述**: 禁用服务器插件频道限制。将禁用每名玩家128插件频道的限制。
+- **描述**: 禁用服务器插件通道限制。将禁用每名玩家128插件通道的限制。
 
 #### net.kyori.adventure.text.warnWhenLegacyFormattingDetected:
 
 - **默认值**: `false`
-- **描述**: 启用或禁用聊天组件历史格式检测警告。
+- **描述**: 当在聊天组件中检测到历史格式时是否要启用警告。
 
 #### Paper.DisableClassPrioritization:
 
 - **默认值**: `unset`
-- **描述**: 禁用类优先级系统，用于解决relocate和shade失败的问题。
+- **描述**: 禁用类优先级系统，用于解决relocate和shade不正确的问题。
+- **原文**：Disables the class prioritization system - mostly an issue when failing to relocate or shade properly.
 
 #### Paper.disableFlushConsolidate:
 
 - **默认值**: `unset`
 - **描述**: 禁用Netty Flush Consolidation系统。
+- **原文**：Disables the netty flush consolidation system.
 
 #### Paper.debugDynamicMissingKeys:
 
@@ -94,7 +97,7 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### Paper.ignoreWorldDataVersion:
 
 - **默认值**: `unset`
-- **描述**: 当加载世界时忽略数据版本。并不推荐启用此项因为可能会导致出现问题。
+- **描述**: 当加载世界时忽略数据版本。不推荐启用此项因为可能会导致出现问题。
 
 #### debug.entities:
 
@@ -124,7 +127,7 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### paper.maxCustomChannelName:
 
 - **默认值**: `64`
-- **描述**: 设置插件频道名称可以取的最大值。
+- **描述**: 设置插件通道名称可以取的最大值。
 
 #### Paper.maxSignLength:
 
@@ -140,7 +143,7 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### Paper.minPrecachedDatafixVersion:
 
 - **默认值**: `Minecraft 世界版本 + 1`
-- **描述**: 如果你想要转换大量的区块，你可以考虑从一点开始进行转换然后设置此项。
+- **描述**: 如果你想要转换大量的区块，你可以考虑从一点开始进行转换并设置此项。
 
 #### Paper.WorkerThreadCount:
 
@@ -170,12 +173,13 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### Paper.debugInvalidSkullProfiles:
 
 - **默认值**: `unset`
-- **描述**: 无效头颅启用调试日志记录。将记录所有无效头颅与其实际位置。
+- **描述**: 为无效头颅启用调试日志记录。将记录所有无效头颅与其实际位置。
 
 #### paper.alwaysPrintWarningState:
 
 - **默认值**: `unset`
-- **描述**: 为特定级打印错误状态。
+- **描述**: 始终为particular level打印错误状态。
+- **原文**：Always prints the warning state for the particular level.
 
 #### Paper.printStacktraceOnBadPluginClassAccess:
 
