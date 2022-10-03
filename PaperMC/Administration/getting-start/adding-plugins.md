@@ -42,7 +42,7 @@ Could not load 'plugins/MyAwesomePlugin-1.0.0.jar' in folder 'plugins'
 org.bukkit.plugin.InvalidDescriptionException: Invalid plugin.yml
 ```
 这意味着你下载的插件不是有效的Paper插件。通常发生在以下情况：  
-1. 该Jar文件不适用于Paper。它也许适用于Forge、Fabric等Mod服务端/客户端，但是Paper无法加载它。  
+1. 该Jar文件不适用于Paper。它也许适用于Forge、Fabric等Mod服务端/客户端，不过Paper无法加载它。  
 2. 插件未能完全下载。当你使用`curl`或者`wget`等工具下载时时，你可能下载的是某网站的源码，而你不是想要下载的插件。大多数出现此情况是因为网络原因，请尝试再次下载插件。如果你通过面板或者SFTP上传插件，确保你的SFTP客户端是二进制传输模式，而不是ASCII模式。查看你使用的SFTP软件文档来了解更多信息。
 
 > **译者说明:**  
