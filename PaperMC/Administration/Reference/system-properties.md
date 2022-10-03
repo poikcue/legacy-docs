@@ -127,7 +127,7 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### paper.maxCustomChannelName:
 
 - **默认值**: `64`
-- **描述**: 设置插件通道名称可以取的最大值。
+- **描述**: 设置插件通道名称的最大值。
 
 #### Paper.maxSignLength:
 
