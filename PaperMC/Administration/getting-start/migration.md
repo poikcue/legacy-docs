@@ -36,7 +36,6 @@ Paper与现有的插件完全兼容。
   
 以下表格将展示Paper服务端和原版服务端存档的区别。  
 [![xQP5BF.png](https://s1.ax1x.com/2022/10/03/xQP5BF.png)](https://imgse.com/i/xQP5BF)
-(如果图片很小，请右键选择在新窗口打开图片。)  
 
 > **注意**  
 > 以下步骤将假设 level-name（在server.properties中设定）是 `world`。  
