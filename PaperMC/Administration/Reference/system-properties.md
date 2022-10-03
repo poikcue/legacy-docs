@@ -137,8 +137,8 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### Paper.FilterThreshhold:
 
 - **默认值**: `8192`
-- **min**: `8192`
-- **描述**: 设置过滤的包最大值的大小。
+- **最小值**: `8192`
+- **描述**: 设置过滤包的最大值的大小。
 
 #### Paper.minPrecachedDatafixVersion:
 
