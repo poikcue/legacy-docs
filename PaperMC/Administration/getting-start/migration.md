@@ -9,7 +9,7 @@
 从CraftBukkit或Spigot服务端迁移到Paper很简单，只需要按照以下步骤进行：  
 1. 停止正在运行的Minecraft服务器，然后新建一份完整的备份。  
 2. 从[官方网站](https://papermc.io/downloads)下载Paper服务端。  
-3. 将下载的Paper服务端代替掉原服务端。  
+3. 使用下载的Paper服务端核心替换掉原服务端。  
 4. 启动服务器。  
 Paper与现有的插件完全兼容。  
   
@@ -19,7 +19,7 @@ Paper与现有的插件完全兼容。
 ### 从Vanilla（原版）
 当从原版迁移到Paper服务端时，每一个世界文件夹都会自动转换。如果你想要从Paper转回原版，请阅读下文的“转到Vanilla（原版）”。
 1. 停止正在运行的原版服务端，然后新建一份完整的备份。  
-2. 从[官方网站](https://papermc.io/downloads)下载Paper服务端并代替掉原版服务端。  
+2. 从[官方网站](https://papermc.io/downloads)下载Paper服务端核心并替换掉原版服务端。  
 3. 启动服务器。  
 
 ### 从Forge或Fabric
@@ -38,8 +38,8 @@ Paper与现有的插件完全兼容。
 [![xQP5BF.png](https://s1.ax1x.com/2022/10/03/xQP5BF.png)](https://imgse.com/i/xQP5BF)
 
 > **注意**  
-> 以下步骤将假设 level-name（在server.properties中设定）是 `world`。  
-> 如果不是，请将下文 `world` 相关字符改成 level-name 的值。  
+> 以下步骤将假设 `level-name`（在server.properties中设定）是 `world`。  
+> 如果不是，请将下文 `world` 相关字符改成 `level-name` 的值。  
   
 1. 如果服务器正在运行，请先停止。
 2. 如果你已经运行了原版服务器，请先前往 `world` 文件夹中删除 DIM-1 和 DIM1 文件夹。只有在原版服务器已经启动时，才需要进行该步骤。
@@ -50,7 +50,7 @@ Paper与现有的插件完全兼容。
 7. 启动原版服务端。
 
 ### 转到CraftBukkit或Spigot
-Paper不支持迁移到CraftBukkit或Spigot！即使你可能会成功（因为Paper与CraftBukkit或Spigot的文件夹结构相同），但是不要为此产生的任何问题寻求支持，并且该过程可能会**丢失数据**。  
+Paper不支持迁移存档到CraftBukkit或Spigot！虽然你可能会成功（因为Paper与CraftBukkit或Spigot的存档文件夹结构相同），但是不要为此产生的任何问题寻求支持，并且该过程可能会**丢失数据**。  
 
 ### 转到Fabric或Forge
-由于Fabric或Forge与原版的文件夹结构是一致的，所以参考原版迁移办法即可完成迁移过程。请注意：Fabric和Forge都不支持Paper插件！请寻找插件替代的Mod。
+因为Fabric或Forge与原版的文件夹结构是一致的，所以参考原版迁移方法即可完成存档迁移。请注意：Fabric和Forge都不支持Paper插件！你需要寻找Mod来代替服务器插件。
