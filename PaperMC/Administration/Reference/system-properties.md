@@ -87,7 +87,7 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### Paper.enable-sync-chunk-writes:
 
 - **默认值**: `unset`
-- **描述**: 在每次调用时同步写入。会影响性能，特别是对于硬盘。
+- **描述**: 在每次调用时同步写入。会影响性能，尤其是是对于硬盘。
 
 #### paper.debug-sync-loads:
 
