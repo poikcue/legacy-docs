@@ -63,4 +63,4 @@ spawn:
 [![xQPHhR.png](https://s1.ax1x.com/2022/10/03/xQPHhR.png)](https://imgse.com/i/xQPHhR)
   
 现在，`world_the_end`的值没有被更改过。所以，它使用了 `config/paper-world-defaults.yml` 中的所有默认值。
-而且在 `resource_world/paper-world.yml` 中禁用了 `keep-spawn-loaded`，很明显的可以看到此项在 `config/paper-world-defaults.yml` 中是启用的。  
+而且在 `resource_world/paper-world.yml` 中禁用了 `keep-spawn-loaded`，不过很明显的可以看到此项在 `config/paper-world-defaults.yml` 中是启用的。  
