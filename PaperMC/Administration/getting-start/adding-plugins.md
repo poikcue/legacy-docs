@@ -24,7 +24,7 @@
 故障排查的第一步是检查服务器启动日志。服务器最新日志会放在服务器根目录下的`logs/latest.log`文件里。你需要从头开始阅读整个日志以检查插件应该在何时被加载并获得一份详细的报错。
 
 ### 缺少依赖
-如果你看到了这样一段文字：
+当你看到了这样一段文字：
 ```
 Could not load 'plugins/MyAwesomePlugin-1.0.0.jar' in folder 'plugins'  
 org.bukkit.plugin.UnknownDependencyException:  Unknown/missing dependency plugins:  [Vault]. Please download and install these plugins to run 'MyAwesomePlugin'.
@@ -36,7 +36,7 @@ Unknown/missing dependency plugins: [Vault]. Please download and install these p
 这句话的意思是，要想加载`MyAwesomePlugin`插件，则必须先在服务器上安装`Vault`插件。
 
 ### 未知的 plugin.yml
-如果你看到了类似于以下内容的文本时：
+当你看到了类似于以下内容的文本时：
 ```
 Could not load 'plugins/MyAwesomePlugin-1.0.0.jar' in folder 'plugins'
 org.bukkit.plugin.InvalidDescriptionException: Invalid plugin.yml
@@ -50,13 +50,13 @@ org.bukkit.plugin.InvalidDescriptionException: Invalid plugin.yml
 > 看看压缩包（Jar通俗点讲是一个压缩包）里面能不能找到`plugin.yml`。如果找不到，那么这就不是一个可以使用的服务器插件！  
 
 ### 未知的插件名称
-如果你看到类似于以下内容的文本时：  
+当你看到类似于以下内容的文本时：  
 ```
 Ambiguous plugin name `Essentials' for files `plugins/EssentialsX-2.19.4.jar' and `plugins/Essentialsx-2.20.0-dev.jar' in `plugins'
 ```  
 这意味着你有两个安装的插件是同名的，Paper不支持同名插件同时加载。此情况发生在同时安装了两个`EssentialsX`插件：一个是正式版2.19.4，一个是开发版本2.20.0。确保安装的插件没有重复的，如果有，删除一个旧版本或一个你不需要的版本，然后重启服务器。  
 
-### 其它
+### 其它情况
 如果出现任何未在上述列表中列出的情况，请先尝试自己阅读并排查报错。即使报错通常很长，但是很多情况下只需要阅读前两行就能明白出现了什么错误。如果还是搞不清楚，请在Paper的Discord服务器中找到 #paper-help 频道以寻求帮助。  
 
 ## 未记录任何日志
