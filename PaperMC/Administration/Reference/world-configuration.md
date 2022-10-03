@@ -25,7 +25,7 @@
 #### max-block-height
 
 - **默认值**: `64`
-- **描述**: 设定一个最大生效高度 (为 `y` 坐标，将从世界最底部开始计算起）以确定反矿物透视的生效范围。只接受 16 的倍数，其余数字将四舍五入处理。[Minecraft Wiki 矿石](https://minecraft.fandom.com/zh/wiki/%E7%9F%BF%E7%9F%B3) 可能会帮助你确定一个最佳数值。
+- **描述**: 设定一个最大生效高度 (为 `y` 坐标，将从世界最底部开始计算起）以确定反矿物透视的生效范围。只接受 16 的倍数，其余数字将四舍五入处理。[Minecraft Wiki 矿石](https://minecraft.fandom.com/zh/wiki/%E7%9F%BF%E7%9F%B3) 会帮助你确定一个最佳数值。
 
 #### update-radius
 
@@ -81,7 +81,7 @@
 ### delay-chunk-unloads-by
 
 - **默认值**: `10s`
-- **描述**: 延迟到何时卸载区块。
+- **描述**: 延迟到多长时间之后卸载区块。
 
 ### entity-per-chunk-save-limit
 
@@ -149,12 +149,12 @@
 #### baby-zombie-movement-modifier
 
 - **默认值**: `0.5`
-- **描述**: 修改僵尸幼崽的移动速度。比如设定 `0.5` 是移动速度快 50%，设定 `-0.4` 是移动速度慢 40%
+- **描述**: 设定僵尸幼崽的移动速度。比如设定 `0.5` 是移动速度快 50%，设定 `-0.4` 是移动速度慢 40%
 
 #### disable-chest-cat-detection
 
 - **默认值**: `false`
-- **描述**: 如果有猫坐在箱子上，是否可以打开箱子（不扫描箱子上的猫）
+- **描述**: 如果有猫坐在箱子上，是否可以打开箱子（即不扫描箱子上的猫）
 
 #### disable-creeper-lingering-effect
 
@@ -189,7 +189,7 @@
 #### nerf-pigmen-from-nether-portals
 
 - **默认值**: `false`
-- **描述**: 是否移除通过下界传送门生成的猪人的AI。
+- **描述**: 是否移除由下界传送门生成的猪人的AI。
 
 #### parrots-are-unaffected-by-player-movement
 
@@ -199,7 +199,7 @@
 #### phantoms-do-not-spawn-on-creative-players
 
 - **默认值**: `true`
-- **描述**: 创造模式的玩家是否不生成幻翼。
+- **描述**: 创造模式的玩家是否不会生成幻翼。
 
 #### phantoms-only-attack-insomniacs
 
@@ -341,7 +341,7 @@
 
 - **默认值**: `saferegen`
 
-- **描述**: 服务器用于解决相同UUID的实体的处理办法。  
+- **描述**: 用于处理相同UUID的实体的处理办法。  
  以下是可选的值：  
   - **`saferegen`**: 为实体重新命名UUID。如果两个离得很近就移除。
   - **`delete`**: 移除实体。
@@ -383,12 +383,12 @@
 #### scan-for-legacy-ender-dragon
 
 - **默认值**: `true`
-- **描述**: 服务器是否会检测末影龙战。设定此值为 `false` 将在末地不再自动生成末影龙，甚至是在新的世界中。
+- **描述**: 服务器是否会检测末影龙战。设定此值为 `false` 将在末地不再自动生成末影龙，甚至在新的世界中。
 
 #### skeleton-horse-thunder-spawn-chance
 
 - **默认值**: `0.01`
-- **描述**: 设定在雷暴天气下召唤骷髅马骑兵大队的概率（劈中骷髅）
+- **描述**: 设定在雷暴天气下召唤骷髅马骑兵队的概率（劈中骷髅时）。
 
 #### slime-spawn-height
 
@@ -414,7 +414,7 @@
 #### spawn-limits
 
 - **默认值**: `-1`
-- **描述**: 用于确定每种类型的实体（可以单独设置）在每个世界中自然生成的数量。这和bukkit.yml中的配置项是一样的，但是可以为每个世界单独设置。设定为 `-1` 将使用 bukkit.yml中的值。 
+- **描述**: 用于确定每种类型的实体（可以单独设置）在每个世界中自然生成的数量。这和bukkit.yml中的配置项是一样的，但是可以为每个世界单独设置。设定为 `-1` 将由 bukkit.yml 中的值管理。 
 
 #### wandering-trader
 
@@ -487,12 +487,12 @@
 ##### max
 
 - **默认值**: `40`
-- **描述**: 霜冰效果的最大RGB值。
+- **描述**: 霜冰效果的最大RNG值。
 
 ##### min
 
 - **默认值**: `20`
-- **描述**: 霜冰效果的最小RGB值。
+- **描述**: 霜冰效果的最小RNG值。
 
 #### enabled
 
@@ -627,7 +627,7 @@
 ### disable-move-event
 
 - **默认值**: `false`
-- **描述**: 完全为漏洞禁用 `InventoryMoveItemEvent` 事件。可以显著提高性能，但是会影响使用此事件的插件，例如领地或保护插件。
+- **描述**: 完全为漏斗禁用 `InventoryMoveItemEvent` 事件。可以显著提高性能，但是会影响使用此事件的插件，例如领地或保护插件。
 
 ### ignore-occluding-blocks
 
@@ -841,4 +841,4 @@
 #### fix-invulnerable-end-crystal-exploit
 
 - **默认值**: `true`
-- **描述**: 如果设定为`false`，则允许创建无敌的末影水晶。修复[MC-108513](https://bugs.mojang.com/browse/MC-108513)。
+- **描述**: 如果设定为`false`，则允许生成无敌的末影水晶。修复[MC-108513](https://bugs.mojang.com/browse/MC-108513)。
