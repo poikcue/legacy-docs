@@ -11,7 +11,7 @@
 不过，下文应当也适用于其它IDE，仅需针对性的作一些微小的修改即可。  
 
 Paper团队使用 [Gradle](https://gradle.org/) 作为构建工具，同时也需要Gradle进行构建。    
-在经过修改后，下文的代码在修改后也将适用于其它构建工具，比如Maven，但是中本文的代码将只适用Gradle。
+在经过修改后，下文的代码在修改后也将适用于其它构建工具，比如Maven，但是本文中的代码将只适用Gradle。
 
 遵循 [此](https://docs.gradle.org/current/userguide/migrating_from_maven.html) 文档学习如何从Maven迁移到Gradle。
 
