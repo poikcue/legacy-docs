@@ -55,7 +55,7 @@ api-version: 1.19
 
 ### description
 
-简短的描述插件是什么滴工作。将会在插件信息命令中显示。
+简短的描述插件是干什么的。将会在插件信息命令中显示。
 - `description: An example plugin`
 
 ### author / authors
