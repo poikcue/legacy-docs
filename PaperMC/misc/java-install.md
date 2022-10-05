@@ -74,7 +74,7 @@ sudo yum -y install java-17-amazon-corretto-devel
 ## Windows 10 & 11
 
 如果你在Windows 10或11上，安装Java就如安装其它软件一样简单。从[官方网站](https://corretto.aws/downloads/latest/amazon-corretto-17-x64-windows-jdk.msi)下载Amazon Corretto安装包。  
-当你使用安装包时，全程点击"next"都是安全的，不会安装任何捆绑或工具，并且全部功能都是开箱即用的。
+当你使用安装包时，全程点击"next"都是安全的，不会安装任何捆绑工具，并且全部功能都是开箱即用的。
 
 当安装完成后，打开命令提示符并跳转到 [验证安装](#verifying-installation)。
 
