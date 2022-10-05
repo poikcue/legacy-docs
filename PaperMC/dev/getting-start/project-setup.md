@@ -14,10 +14,10 @@ Paper团队使用 [Gradle](https://gradle.org/) 作为构建工具，同时也�
 ### 创建新工程
 
 打开你的IDE然后点击创建新工程的按钮。  
-[![xlD8wq.png](https://s1.ax1x.com/2022/10/05/xlD8wq.png)](https://imgse.com/i/xlD8wq)
-在Intellij中，你需要选择你想要创建的工程类型 - 选择 `New Project`，然后选择 `Gradle - Kotlin DSL` 后单击 `Create`。  
+[![xlD8wq.png](https://s1.ax1x.com/2022/10/05/xlD8wq.png)](https://imgse.com/i/xlD8wq)  
+在Intellij中，你需要选择你想要创建的工程类型 - 选择 `New Project`，然后选择 `Gradle - Kotlin DSL` 后单击 `Create`。    
 
-[![xlDYkV.png](https://s1.ax1x.com/2022/10/05/xlDYkV.png)](https://imgse.com/i/xlDYkV)  
+[![xlDYkV.png](https://s1.ax1x.com/2022/10/05/xlDYkV.png)](https://imgse.com/i/xlDYkV)    
 
 接着，你将在IDE中自动重定向到可添加工程依赖的 `build.gradle.kts` 文件。  
 
