@@ -75,7 +75,7 @@ public class ExamplePlugin extends JavaPlugin {
         coolEvent.callEvent();
         // 插件本来就可以够从它们的监听器内部更改消息的。所以我们需要重新获取消息。
         // 此事件结构允许其它插件从它们那里更改消息。
-        // 像，举个例子：一个插件为所有消息添加了前缀！
+        // 举个例子：一个插件为所有消息添加了前缀！
         Bukkit.broadcast(coolEvent.getMessage());
     }
 }
