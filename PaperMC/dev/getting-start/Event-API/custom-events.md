@@ -106,7 +106,7 @@ public class PaperIsCoolEvent extends Event implements Cancellable {
 }
 ```
 
-现在，当事件被调用时，你就可以检查它是否被取消与是否这样做了。
+现在，当事件被调用时，你就可以检查它是否被取消与是否确实这样做了。
 
 ```java
 public class ExamplePlugin extends JavaPlugin {
