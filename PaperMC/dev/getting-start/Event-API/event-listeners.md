@@ -22,8 +22,8 @@ public class ExampleListener implements Listener {
 
 ## 监听器方法
 
-Method Body 无需返回任何数据，因为使用 `void` 就视为返回的类型。
-listener接受该事件所监听到的单个参数。
+Method Body 无需返回任何数据，因为使用 `void` 就视为返回的类型。  
+监听器接受该事件所监听到的单个参数。
     
 ```java
 public class ExampleListener implements Listener {
@@ -43,7 +43,7 @@ public class ExampleListener implements Listener {
 要注册监听器，你需要调用 `Bukkit.getPluginManager().registerEvents()` 并传入监听器类的实例和你的插件的实例。  
   
  将会注册监听器类并允许它监听所有事件。    
- 通常会在你的插件的 `onEnable()` 方法中，所以一般会在服务器开始Ticking注册。
+ 通常会在你的插件的 `onEnable()` 方法中，所以一般会在服务器开始Ticking时注册。
 
 ```java
 public class ExamplePlugin extends JavaPlugin {
