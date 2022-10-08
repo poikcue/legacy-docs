@@ -1,7 +1,7 @@
 # Handler 列表
 
 每个 `Event`（事件）都有一个 `HandlerList` 来包含所有的监听器与监听的事件。    
-该列表常常用于在事件被调用时，调用监听器。  
+该列表常常用于在事件被调用时，同时调用监听器。  
 
 ## 为一个事件获取handler列表
 
@@ -40,13 +40,13 @@ public class ExampleListener implements Listener {
         // ...
     }
     
-    // Or:
+    // 或者：
     
     public ExampleListener() {
-        // Access the handler list through the static getter
+        // 通过静态getter访问handler列表
         HandlerList handlerList = PlayerJoinEvent.getHandlerList();
         handlerList.unregister(this);
-        // Granted this is a pretty stupid example...
+        // 的确，这是一个愚蠢的例子...
     }
 }
 ```
