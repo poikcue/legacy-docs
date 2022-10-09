@@ -335,9 +335,9 @@
 - **默认值**: `false`
 - **描述**: 是否要禁止玩家使用刷怪蛋修改刷怪笼刷出生物的种类。
 
-### duplicate-uuid
+#### duplicate-uuid
 
-#### mode
+##### mode
 
 - **默认值**: `saferegen`
 
@@ -348,7 +348,7 @@
   - **`silent`**: 啥也别干，只打印日志。
   - **`warn`**: 啥也别干，日志都别给我打印。
 
-#### safe-regen-delete-range
+##### safe-regen-delete-range
 
 - **默认值**: `32`
 - **描述**: 若在上面使用 `saferegen` 值，那么两个生物相距多少方块才应该移除一个。
