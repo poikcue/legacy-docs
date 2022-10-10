@@ -4,4 +4,21 @@ Paper 是 Minecraft Spigot 服务端的一个高性能Fork。旨在修复游戏�
 ## 许可证
 本作品使用 [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode) 作为许可证。同时，本作品原作者为 PaperMC 团队（及所有对本文的贡献者）。  
 poikcue 对本作品进行翻译工作。  
-本 Paper 文档原页面：https://docs.papermc.io/paper
+本 Paper 文档原页面：https://docs.papermc.io/paper  
+
+## 翻译说明
+### 校对
+我对里面的文本简单校对了一下，也有可能有打错字的现象。  
+有部分配置项 Paper 给的描述过少，翻译可能会出错。所以，请尽量和原英文版本一起阅读。  
+  
+### 专业术语
+我对Java了解不深，很多术语是请教Java大佬的。  
+如果有部分专业术语翻译的有误，请帮忙指出，谢谢。  
+  
+部分术语我找了很多参考资料，我也不确定部分单词是不是术语，如果有任何错误请麻烦在 [GitHub Issue](https://github.com/poikcue/docs/issues/new) 留言或提交 [PR](https://github.com/poikcue/docs/pulls)。  
+
+### 特别感谢
+**Kylepoops** - 部分Java术语建议和翻译。  
+  
+*...如果您对文档反馈了有效的问题、或提交了一个PR，您也会在此列表中显示！*  
+*如果您发现任何拼写错误、Java术语错误及难以理解的翻译，请不要犹豫——立即在上方提供的 GitHub Issue 中反馈或提交PR！*  
