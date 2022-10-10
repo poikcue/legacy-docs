@@ -60,14 +60,13 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### Paper.DisableClassPrioritization:
 
 - **默认值**: `unset`
-- **描述**: 禁用类优先级系统，用于解决relocate和shade不正确的问题。
-- **原文**：Disables the class prioritization system - mostly an issue when failing to relocate or shade properly.
+- **描述**: 禁用类优先级系统，主要是解决未能正确处理relocate与shade的问题。
 
 #### Paper.disableFlushConsolidate:
 
 - **默认值**: `unset`
 - **描述**: 禁用Netty Flush Consolidation系统。
-- **原文**：Disables the netty flush consolidation system.
+- **原文**: Disables the netty flush consolidation system.
 
 #### Paper.debugDynamicMissingKeys:
 
@@ -178,8 +177,8 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### paper.alwaysPrintWarningState:
 
 - **默认值**: `unset`
-- **描述**: 始终为particular level打印错误状态。
-- **原文**：Always prints the warning state for the particular level.
+- **描述**: 是否始终为特定level打印警告。
+- **原文**: Always prints the warning state for the particular level.
 
 #### Paper.printStacktraceOnBadPluginClassAccess:
 
