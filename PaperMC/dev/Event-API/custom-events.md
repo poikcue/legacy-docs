@@ -125,9 +125,7 @@ public class ExamplePlugin extends JavaPlugin {
     }
 }
 ```
-当一个事件为cancellable并且事件已经被取消，`Event#callEvent` 则会返回 `false`。这就允许你直接使用 `callEvent` 所输出的结果。   
-  
-因此在你的if语句中，就无需手动检查 `Cancellable#isCancelled` 了。  
+当一个事件为cancellable并且事件已经被取消，`Event#callEvent` 则会返回 `false`。这就允许你直接在if语句中使用 `callEvent` 所输出的结果，而无需手动检查 `Cancellable#isCancelled`了。  
   
 ```java
 
