@@ -125,9 +125,9 @@ public class ExamplePlugin extends JavaPlugin {
     }
 }
 ```
-当一个事件为cancellable并且事件被取消，`Event#callEvent` 则会返回 `false`。这就允许你直接使用 `callEvent` 所输出的结果。   
+当一个事件为cancellable并且事件已经被取消，`Event#callEvent` 则会返回 `false`。这就允许你直接使用 `callEvent` 所输出的结果。   
   
-在你的if语句中，就无需手动检查 `Cancellable#isCancelled` 了。  
+因此在你的if语句中，就无需手动检查 `Cancellable#isCancelled` 了。  
   
 ```java
 
@@ -139,7 +139,7 @@ public class ExamplePlugin extends JavaPlugin {
     // ...
     public void callCoolPaperEvent() {
         PaperIsCoolEvent coolEvent = new PaperIsCoolEvent(Component.text("Paper is cool!"));
-        if (coolEvent.callEvent()) { // 直接从callEvent得到输出结果。
+        if (coolEvent.callEvent()) { // 直接从callEvent获取输出结果。
             Bukkit.broadcast(coolEvent.getMessage());
         }
     }
