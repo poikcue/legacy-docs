@@ -1,11 +1,14 @@
 # 自定义事件
 
 创建自定义事件是为你的插件添加新功能的不错的方式。    
-这将允许其它人监听你的自定义事件并为你的插件添加新功能。
+这将允许其它插件监听你的自定义事件并为你的插件添加新功能。
 
 ## 创建一个自定义事件
 
-要创建一个自定义事件，你必须创建一个类并使其继承 `Event`。每个事件都有一个 `HandlerList` 并包含所有监听其事件的监听器。  
+要创建一个自定义事件，你需要创建一个类并继承 `Event`。每个事件都需要一个 `HandlerList` 以包含所有监听到该事件的监听器。  
+但是例外的情况是，当你有一个无法启动的事件类时，需要用其它事件替代来充当父级。  
+  
+这有一个不能直接监听 `BlockPistonEvent` 的例子。
 
 该列表用于当事件被调用时，调用监听器。
 
@@ -71,7 +74,7 @@ public class ExamplePlugin extends JavaPlugin {
     // ...
 
     public void callCoolPaperEvent() {
-        PaperIsCoolEvent coolEvent = new PaperIsCoolEvent(Component.text("Paper is cool!"))
+        PaperIsCoolEvent coolEvent = new PaperIsCoolEvent(Component.text("Paper is cool!"));
         coolEvent.callEvent();
         // 插件本来就可以够从它们的监听器内部更改消息的。所以我们需要重新获取消息。
         // 此事件结构允许其它插件从它们那里更改消息。
@@ -106,7 +109,7 @@ public class PaperIsCoolEvent extends Event implements Cancellable {
 }
 ```
 
-现在，当事件被调用时，你就可以检查它是否被取消与是否确实这样做了。
+现在，当事件被调用时，你就可以检查它是否被取消了。
 
 ```java
 public class ExamplePlugin extends JavaPlugin {
@@ -114,11 +117,32 @@ public class ExamplePlugin extends JavaPlugin {
     // ...
 
     public void callCoolPaperEvent() {
-        PaperIsCoolEvent coolEvent = new PaperIsCoolEvent(Component.text("Paper is cool!"))
+        PaperIsCoolEvent coolEvent = new PaperIsCoolEvent(Component.text("Paper is cool!"));
         coolEvent.callEvent();
         if (!coolEvent.isCancelled()) {
             Bukkit.broadcast(coolEvent.getMessage());
         }
     }
 }
+```
+当一个事件为cancellable并且事件被取消，`Event#callEvent` 则会返回 `false`。这就允许你直接使用 `callEvent` 所输出的结果。   
+  
+在你的if语句中，就无需手动检查 `Cancellable#isCancelled` 了。  
+  
+```java
+
+public class ExamplePlugin extends JavaPlugin {
+
+// ...
+
+public class ExamplePlugin extends JavaPlugin {
+    // ...
+    public void callCoolPaperEvent() {
+        PaperIsCoolEvent coolEvent = new PaperIsCoolEvent(Component.text("Paper is cool!"));
+        if (coolEvent.callEvent()) { // 直接从callEvent得到输出结果。
+            Bukkit.broadcast(coolEvent.getMessage());
+        }
+    }
+}
+
 ```
