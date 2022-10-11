@@ -1,11 +1,11 @@
-name: 中文语法错误报告
+name: 语法错误报告
 description: 为文档中的翻译报告语法错误。
-labels: [ bug ]
+labels: [ 语法错误 ]
 body:
   - type: markdown
     attributes:
       value: |
-        如果您发现文档中任何关于翻译已有的中文文本出现**不准确、出现语法错误、错别字**等情况，  
+        如果您发现文档中任何已有的中文翻译出现**不准确、出现语法错误、错别字**等情况，  
         请您在这里报告翻译错误。  
   - type: dropdown
     id: report
@@ -65,4 +65,4 @@ body:
   - type: markdown
     id: thanks
     attributes:
-      value: "Thank you for filling out the form! We will be with you soon. Please do not ask support to review your report."
+      value: "谢谢！我们会很快注意到您的报告并查看相应文本。"
