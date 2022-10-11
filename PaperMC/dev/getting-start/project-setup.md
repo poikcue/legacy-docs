@@ -43,7 +43,7 @@ java {
 ### 设立 `src` 目录
 
 > **跳过**  
-> 如果IDE为你的工程自动创建 `src` 目录，你就可以跳过这一步了。
+> 如果IDE已经为你的工程自动创建 `src` 目录，你就可以跳过这一步了。
 
 要设立 `src` 目录，你需要新建一个命名为 `src` 的文件夹然后再在里面创建子目录，叫做 `main`。  
 然后，在`Main`之中创建两个文件夹，分别命名为 `java` 和 `resources`。  
@@ -93,7 +93,7 @@ example-plugin
 如果你还没有一个域名，你可以将类似于你的GitHub用户名的东西作为包名。  
 若你的名字叫做 Linus Torvalds，你的包应该是 `io.github.torvalds`。  
 
-跟随这些包名后面的应该是你的工程名。  
+跟随包名后面的应该是你的工程名。  
 比如，如果你的工程叫做 `ExamplePlugin`，你的包应该是`io.github.torvalds.exampleplugin`。  
 这将为你每个插件取一个独一无二包名。
 
