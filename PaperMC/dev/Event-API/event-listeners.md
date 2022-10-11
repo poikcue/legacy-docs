@@ -23,8 +23,11 @@ public class ExampleListener implements Listener {
 ## 监听器方法
 
 Method Body 无需返回任何数据，因为使用 `void` 就视为返回的类型。  
-监听器接受该事件所监听到的单个参数。
+监听器接受该事件所监听到的单个参数。  
+  
+一个事件只能在有静态 `getHandlerList` 方法时才能被监听。   
     
+   
 ```java
 public class ExampleListener implements Listener {
 
