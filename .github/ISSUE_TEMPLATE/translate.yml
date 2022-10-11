@@ -1,60 +1,67 @@
-name: Adapt Bug Report
-description: File a bug report for Adapt
+name: 中文语法错误报告
+description: 为文档中的翻译报告语法错误。
 labels: [ bug ]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to fill this out!
-        If this does not work for you, feel free to use the [blank](https://github.com/VolmitSoftware/Adapt/issues/new) format.
-  - type: textarea
-    id: how
+        如果您发现文档中任何关于翻译已有的中文文本出现**不准确、出现语法错误、错别字**等情况，  
+        请您在这里报告翻译错误。  
+  - type: dropdown
+    id: report
     attributes:
-      label: Problem
-      description: Please give a text description of how you reached the problem
-      value: |
-        1. Install Adapt...
-        2. Do this...
-        3. Do that...
-        4. Observe the error...
+      label: 报告文档
+      description: 哪个文档中的中文翻译描述不准确或出现语法错误？
+      options:
+        - LibrePremium
+        - Paper
     validations:
       required: true
   - type: textarea
-    id: what
+    id: line
     attributes:
-      label: Solution (if any)
-      description: Explain where you think the problem comes from (optional)
-      placeholder: The code to place a is missing b and c...
+      label: 链接
+      description: 请提供出现语法错误的链接，或GitHub存储库对应Markdown页面的链接。
+      value: |
+        例如：https://docs.poikcue.com/#/PaperMC/Administration/how-to/updating
+        或者：https://github.com/poikcue/docs/blob/main/PaperMC/Administration/how-to/updating.md
+        以上两个链接都行，提供一个即可。
+    validations:
+      required: true
+  - type: textarea
+    id: area
+    attributes:
+      label: 语法错误所在句
+      description: 请复制出现语法错误的句子。
+      value: |
+        例如：在更新服务器时一并将服务器备份是个好主意
+    validations:
+      required: true
+  - type: input
+    id: error
+    attributes:
+      label: 语法错误文本
+      description: 请复制语法错误文本。
+      value: |
+        例如：是个
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: 建议文本
+      description: 您建议修改为什么？您也可以提供您的修改意见，或是这句话出现了什么问题。
+      value: |
+        例如：将 “是个” 修改为 “是一个”
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充
+      description: 可选。您有什么想要补充的吗？
     validations:
       required: false
-  - type: dropdown
-    id: mcversion
-    attributes:
-      label: Minecraft Version
-      description: What version of Minecraft is the server on?
-      options:
-        - 1.19.2
-        - 1.20
-        - 1.21
-        - 1.22
-    validations:
-      required: true
-  - type: input
-    id: Adaptversion
-    attributes:
-      label: Adapt Version
-      description: What version of Adapt are you running?
-      placeholder: DO NOT SAY "LATEST"
-    validations:
-      required: true
-  - type: input
-    id: logs
-    attributes:
-      label: Log
-      description: Paste a full log. Always use [mclogs](https://mclo.gs) Or [Pastebin](https://pastebin.com/). Must not be a crash report. Must be a full log. Must not be a screenshot of a log.
-      placeholder: https://mslog.gs/...
-    validations:
-      required: true
   - type: markdown
     id: thanks
     attributes:
