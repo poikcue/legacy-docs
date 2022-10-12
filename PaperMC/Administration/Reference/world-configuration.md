@@ -25,7 +25,7 @@
 #### max-block-height
 
 - **默认值**: `64`
-- **描述**: 设定一个最大生效高度 (为 `y` 坐标，将从世界最底部开始计算起）以确定反矿物透视的生效范围。只接受 16 的倍数，其余数字将四舍五入处理。[Minecraft Wiki 矿石](https://minecraft.fandom.com/zh/wiki/%E7%9F%BF%E7%9F%B3) 会帮助你确定一个最佳数值。
+- **描述**: 设定一个最大生效高度 (为 `y` 坐标，将从世界最底部开始计算起）以确定反矿物透视的生效范围。只接受 16 的倍数，其余数字将四舍五入处理。[中文Minecraft Wiki 矿石](https://minecraft.fandom.com/zh/wiki/%E7%9F%BF%E7%9F%B3) 会帮助你确定一个最佳数值。
 
 #### update-radius
 
