@@ -753,7 +753,7 @@
 ### show-sign-click-command-failure-msgs-to-player
 
 - **默认值**: `false`
-- **描述**: 点击告示牌运行命令失败时是否需要向玩家显示失败命令。
+- **描述**: 点击告示牌运行命令失败时是否需要向玩家显示失败消息。
 ### update-pathfinding-on-block-update
 
 - **默认值**: `true`
