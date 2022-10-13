@@ -708,7 +708,7 @@
 ### disable-end-credits
 
 - **默认值**: `false`
-- **描述**: 离开末地是服务器是否永不播放终末之诗。
+- **描述**: 离开末地时是否永不播放终末之诗。
 
 ### disable-relative-projectile-velocity
 
