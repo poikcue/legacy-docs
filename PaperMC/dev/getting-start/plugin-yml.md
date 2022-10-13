@@ -3,7 +3,7 @@
 plugin.yml文件是你的插件最主要的配置文件。
 包含你的插件最基本的信息，比如插件名，版本和简要描述。同时，也将包含加载插件的依赖，权限和命令。
 
-书接上回。plugin.yml文件存放在你的工程中的 `resources` 文件夹中，就如下图的结构一样：
+书接上回。plugin.yml文件存放在你的工程中的 `resources` 文件夹中，结构如下图所示：
 ```
 example-plugin
 ├── build.gradle.kts
@@ -17,7 +17,7 @@ example-plugin
 
 ## 例子
 
-这是一个 plugin.yml 的例子：
+这是一个 plugin.yml 模板：
 
 ```yaml
 name: ExamplePlugin
@@ -31,8 +31,8 @@ api-version: 1.19
 
 ## 字段
 
-> 这部分所有内容的所有字段都无需特定顺序。  
-> 如果在它们的旁边有星号，意味这是必填项目。
+> 这部分所有内容的所有字段都没有特定顺序。  
+> 如果在它们的旁边有星号，即是必填项。
 
 
 ### name*
@@ -43,24 +43,24 @@ api-version: 1.19
 
 ### version*
 
-插件当前的版本。将会在插件信息文本和服务器日志文本中显示。
+插件当前的版本。会在插件信息文本和服务器日志文本中显示。
 - `version: 1.0.0`
 
 ### main*
 
-插件的主类。是唯一一个继承 `JavaPlugin` 的类，并且是插件的切入点。
+插件的主类。是唯一一个继承 `JavaPlugin` 的类，并且是插件的入口。
 - `main: io.papermc.testplugin.ExamplePlugin`
 
 需要包含 包的路径和主类的名字（不用带.java或者.kt）
 
 ### description
 
-简短的描述插件是干什么的。将会在插件信息命令中显示。
+简单描述插件的作用。将会在插件信息命令中显示。
 - `description: An example plugin`
 
 ### author / authors
 
-插件的作者（开发者）。可以是单作者或作者列表。  
+插件的作者（开发者）。可以填写单个作者或作者列表。  
 - `author: PaperMC`
 - `authors: [PaperMC, SpigotMC, Bukkit]`
 将会在插件信息命令中显示。  
@@ -99,7 +99,7 @@ api-version: 1.19
 > 下面的第二行我不确定啥意思，原文在下面列出来了。
 
 列出你的插件需要依赖的libraries。这些libraries将会从Maven central存储库下载并加到 classpath 中。  
-无需shade和relocate libraries。
+即无需为shade分配libraries了。
 - 原文：`This removes the need to shade and relocate the libraries.`
 ```yaml
 libraries:
@@ -109,7 +109,7 @@ libraries:
 
 ### permissions
 
-列出你的插件所需的权限。对应限制哪些玩家应该可以使用哪些功能很有用。  
+列出你的插件所需的权限。如果需要限制哪些玩家可以使用哪些命令，这个功能很有用。  
 ```yaml
 permissions :
   - permission.node:
@@ -155,15 +155,15 @@ commands:
 
 ### depend
 
-列出插件**加载**时的依赖。需要指定插件名称。
-
-> 如果指定插件找不到，你的插件也不会加载。
-
+列出插件要**加载**所需的依赖。需要指定插件名称。
+  
+> 如果指定插件找不到，你的插件也不会加载。  
+  
 - `depend: [Vault, WorldEdit]`
-
+  
 ### softdepend
-
-要使用插件全部功能的依赖列表（软依赖。不用这些插件也能正常加载插件，但是不能访问全部功能）。需要指定插件名称。
+  
+要使用插件全部功能的依赖列表（软依赖。不用这些插件也能正常加载插件，但是不能使用全部功能）。需要指定插件名称。
 
 - `softdepend: [Vault, WorldEdit]`
 
