@@ -99,7 +99,7 @@ api-version: 1.19
 > 下面的第二行我不确定啥意思，原文在下面列出来了。
 
 列出你的插件需要依赖的libraries。这些libraries将会从Maven central存储库下载并加到 classpath 中。  
-即无需为shade分配libraries了。
+无需为shade分配libraries。
 - 原文：`This removes the need to shade and relocate the libraries.`
 ```yaml
 libraries:
@@ -169,7 +169,7 @@ commands:
 
 ### loadbefore
 
-列出插件优先加载的插件列表。需要指定插件名称。  
-若需要优先加载你的插件，在某些插件需要使用你的插件的API时很有用。
+列出应该在哪些插件加载之前优先加载。需要指定插件名称。  
+如果某些插件需要使用你的插件的API时很有用。
 
 - `loadbefore: [Vault, FactionsUUID]`
