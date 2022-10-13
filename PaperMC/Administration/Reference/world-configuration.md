@@ -741,7 +741,7 @@
   - **vanilla**: 原版实现。
   - **eigencraft**: theosib 开发的 Eigencraft 红石实现。
   - **alternate-current**: Space Walker 开发的 Alternate Current 红石实现。
-- **note:** 无论是 Eigencraft 还是 Alternate Current 的红石实现方式都修改了红石的行为。通过以下文档了解各自的红石实现。
+- **注意:** 无论是 Eigencraft 还是 Alternate Current 的红石实现方式都修改了红石的行为。通过以下文档了解各自的红石实现。
   文档
   - Eigencraft: 目前没有官方文档。但是[theosib's comments](https://bugs.mojang.com/browse/MC-81098?focusedCommentId=420777#comment-42077)在Mojira Bug Tracker对此实现进行了概述。
   - [Alternate Current](https://github.com/SpaceWalkerRS/alternate-current/blob/main/README.md)
