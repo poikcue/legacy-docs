@@ -7,9 +7,9 @@
 不过，下文应当也适用于其它IDE，仅需针对性的作一些微小的修改即可。  
 
 Paper团队使用 [Gradle](https://gradle.org/) 作为构建工具，同时也需要Gradle进行构建。    
-在经过修改后，下文的代码在修改后也将适用于其它构建工具，比如Maven，但是本文中的代码将只适用Gradle。
+在经过修改后，下文的代码在修改后也将适用于其它构建工具，例如Maven。不过本文提供的代码将只适用Gradle。
 
-遵循 [此](https://docs.gradle.org/current/userguide/migrating_from_maven.html) 文档学习如何从Maven迁移到Gradle。
+阅读[此](https://docs.gradle.org/current/userguide/migrating_from_maven.html)文档学习如何从Maven迁移到Gradle。
 
 ### 创建新工程
 
@@ -19,11 +19,11 @@ Paper团队使用 [Gradle](https://gradle.org/) 作为构建工具，同时也�
 
 [![xlDYkV.png](https://s1.ax1x.com/2022/10/05/xlDYkV.png)](https://imgse.com/i/xlDYkV)    
 
-接着，你将在IDE中自动重定向到可添加工程依赖的 `build.gradle.kts` 文件。  
+接着，IDE将自动为你重定向至可添加工程依赖的 `build.gradle.kts` 文件。  
 
 ### 将Paper作为依赖
 
-要将Paper作为依赖，你需要将Paper存储库和其依赖本身添加到你的 `build.gradle.kts` 文件中。  
+要将Paper作为依赖，你需要将Paper存储库和Paper本身添加到你的 `build.gradle.kts` 文件中。  
 
 ```kotlin
 repositories {
@@ -86,20 +86,20 @@ example-plugin
 ### 包
 
 可以看到，`ExamplePlugin`类（class）在 `io.papermc.testplugin` 包中。  
-包是管理你的代码的方式。本质上，包就是个文件夹。在Java中，使用包以管理其涉及到的代码。  
-如果你想要阅读更多关于包的信息，你可以在Oracle的指南中[查看](https://docs.oracle.com/javase/tutorial/java/package/packages.html)。  
+包是管理你的代码的方式。本质上，包就是个文件夹。在Java中，我们用包来管理与其相关的代码。  
+如果你想要了解更多关于包的信息，你可以在Oracle的指南中[查看](https://docs.oracle.com/javase/tutorial/java/package/packages.html)。  
 
-要为你的包[命名](https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html)，你需要将域名倒序排列。比如你有一个叫做 `papermc.io`的域名，你的包应该命名为 `io.papermc`。  
-如果你还没有一个域名，你可以将类似于你的GitHub用户名的东西作为包名。  
+要为你的包[命名](https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html)，你需要将域名倒序排列。比如有一个叫做 `papermc.io`的域名，你的包就应该命名为 `io.papermc`。  
+如果你还没有一个域名，你可以将类似于你的GitHub用户名的东西作为包名（格式大概是：io.github.用户名）。  
 若你的名字叫做 Linus Torvalds，你的包应该是 `io.github.torvalds`。  
 
-跟随包名后面的应该是你的工程名。  
-比如，如果你的工程叫做 `ExamplePlugin`，你的包应该是`io.github.torvalds.exampleplugin`。  
-这将为你每个插件取一个独一无二包名。
+跟随包名的应该是你的工程名。  
+比如，你有一个的工程叫做 `ExamplePlugin`，你的包应该是`io.github.torvalds.exampleplugin`。  
+你的每个插件都会有一个独一无二的包名。
 
 ### 主类
 
-并且也是你的插件中唯一一个继承 `JavaPlugin` 的类。 
+主类是你的插件中唯一一个继承 `JavaPlugin` 的类。 
 你的 `ExamplePlugin` 类应当看上去像是这样：
 
 ```java
@@ -129,17 +129,17 @@ public class ExamplePlugin extends JavaPlugin implements Listener {
 
 ### 设立 `resources` 
 
-该 `resources` 文件夹是你开发的插件存放 `plugin.yml` 的地方。查看左侧 Plugin Yml页面以了解更多信息。  
+该 `resources` 文件夹是在你的插件中存放 `plugin.yml` 的地方。在[这里](https://docs.poikcue.com/#/PaperMC/dev/getting-start/plugin-yml)了解更多关于plugin.yml的信息。  
 
 ### 最后
 
-现在，你应当有一个将Paper作为依赖的工程啦！  
-你现在只需要编译你的插件，然后跑在Paper服务器上使用插件就好。  
+现在，你就有一个将Paper作为依赖的工程啦！  
+你现在只需要编译你的插件，然后在Paper服务器上使用插件就大功告成了。  
 
 > **注：**  
-> 如果你想要快速测试你的插件，你可以 [Run-Paper](https://github.com/jpenilla/run-paper) Gradle task。  
-> 它将自动下载Paper服务器并为服务于你的插件。  
+> 如果你想要快速测试你的插件，你可以使用 [Run-Paper](https://github.com/jpenilla/run-paper) Gradle task。  
+> 它将自动下载Paper并为帮助你测试你的插件。  
 
 > **详细信息：**    
-> 如果你正在使用IntelliJ，你应使用 Gradle GUI `Build` 菜单来编译你的插件 - 在你的IDE的右上角。
-> 你的输出的jar应该存放在 `build/libs` 文件夹中。
+> 如果你正在使用IntelliJ，你应使用 Gradle GUI `Build` 菜单来编译你的插件 - 应该位于你的IDE的右上角。
+> 编译成功后输出的jar文件应该存放在 `build/libs` 文件夹中。
