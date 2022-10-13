@@ -60,7 +60,7 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### Paper.DisableClassPrioritization:
 
 - **默认值**: `unset`
-- **描述**: 禁用类优先级系统，主要是解决未能正确处理relocate与shade的问题。
+- **描述**: 禁用类优先级系统，主要是解决未能正确处理relocate和shade的问题。
 
 #### Paper.disableFlushConsolidate:
 
@@ -116,7 +116,7 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### debug.rewriteForIde:
 
 - **默认值**: `unset`
-- **描述**: 在堆栈轨迹移除NMS更改以允许在IDE中更便捷的调试。也会重新映射CB插件调用以移除版本信息。
+- **描述**: 在堆栈跟踪中移除NMS更改以在IDE中方便调试。也会remap CB插件调用以移除版本信息。
 
 #### convertLegacySigns:
 
