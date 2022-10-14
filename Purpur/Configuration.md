@@ -489,9 +489,9 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
     - **默认值**: true
     - **描述**: 是否允许附魔超过最大限制等级。例如：效率V+效率V=效率VI。
 
-## world-settings
+## 世界设定
 
-世界设置以每个世界为基础。子节点 `default` 将应用于未使用特定设置的所有世界。
+世界设定以每个世界为基础。子节点 `default` 将应用于未使用特定设置的所有世界。
 
 想要了解关于针对配置文件的更多信息，可在[这里](https://docs.poikcue.com/#/PaperMC/Administration/how-to/configuration)查看来自Paper的解释。（上面是译者翻译的Paper文档。原英文页面在[这里](https://docs.papermc.io/paper/per-world-configuration)）
 
@@ -1733,7 +1733,7 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
     - **描述**: 设定为 "true" 即当此生物处于水中时令其造成伤害。
 * ##### tulips-change-type
     - **默认值**: false
-    - **描述**: 对其喂白/orange郁金香会改变至 snow/regular 类型。
+    - **描述**: 对其喂白/橙色郁金香会改变至 snow/regular 类型。
 * ##### breeding-delay-ticks
     - **默认值**: 6000
     - **描述**: 在繁殖之前需要等待的Tick数量。
