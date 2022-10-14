@@ -192,7 +192,7 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
 ### use-alternate-keepalive
 
 - **默认值**: false
-- **描述**: 使用一个判断ping超时心跳包不同的办法。启用此项后将向玩家每秒发送一次心跳包，如果他们在30秒内没有响应则以超时为由踢出玩家。以何种顺序响应，只要他们之中有一位响应都会继续允许玩家响应。也就是说如果某名玩家丢包时便不会踢出玩家。
+- **描述**: 是否应该使用ping超时心跳包不同的办法。启用此项后将向玩家每秒发送一次心跳包，如果他们在30秒内没有响应则以超时为由踢出玩家。以何种顺序响应，只要他们之中有一位响应都会继续允许玩家响应。也就是说如果某名玩家丢包时便不会踢出玩家。
 	
 ### tps-catchup
 
@@ -200,27 +200,27 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
 - **描述**: 是否要启用TPS catchup
 
 > **注意**  
-> TPS catchup 会在任何时间的tps低于20时，使服务器计时tick的速度比20TPS更快。这会尝试使平均的TPS尽可能地更接近于20，但是也会有副作用。
+> TPS catchup 会当服务器的tps低于20时，令服务器计时tick的速度比20TPS更快。这会尝试使平均的TPS值尽可能地更接近于20，不过也会有副作用。
 	
 ### server-mod-name
 - **默认值**: Purpur
-- **描述**: 当客户端过期时或某名玩家按下F3时显示在调试页面中显示的服务器名称
+- **描述**: 当客户端过期时或某名玩家按下F3时显示在调试页面中所显示的服务器名称
 
 ### fix-projectile-looting-transfer
 - **默认值**: false
-- **描述**: 阻止通过弹射物而掠夺造成的死亡，除非插件修改了掠夺modifier。解决[`MC-3304`](https://bugs.mojang.com/browse/MC-3304)。
+- **描述**: 是否要阻止通过弹射物而掠夺造成的死亡，除非插件修改了掠夺modifier。解决[`MC-3304`](https://bugs.mojang.com/browse/MC-3304)。
 
 ### username-valid-characters
 - **默认值**: ^[a-zA-Z0-9_.]*$
-- **描述**: 可以在用户名中使用的字符。使用正则表达式设定。
+- **描述**: 用户名中可以使用的字符。此项需要使用正则表达式。
 
 ### lagging-threshold
 - **默认值**: 19.0
-- **描述**: 当出现延迟时，进行追踪以确保正确更改行为。当你认为服务器出现延迟时，此项就是阈值。不过目前本项仅用于Purpur设定`mob.villager.brain-ticks`。
+- **描述**: 当出现延迟时，是否进行追踪以确保正确地处理了行为。当服务器出现延迟时，此项即为阈值。不过目前本项仅用于设定Purpur中的`mob.villager.brain-ticks`。
 	
 ### disable-give-dropping
 - **默认值**: false
-- **描述**: 设定为true时，若玩家物品栏已满，`/give`命令将不会将物品丢弃到地上。
+- **描述**: 设定为true时，若玩家物品栏已满，`/give`命令不会将物品掉落在地上。
 	
 ### messages
 
@@ -240,25 +240,25 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
 需要 [`kick-if-idle`](#kick-if-idle) 设定为 `false`
 
 - **默认值**: "[AFK] "
-- **描述**: 当某玩家处于挂机状态时在TAB玩家列表中显示的前缀。
+- **描述**: 当某玩家处于挂机状态时，在TAB玩家列表中显示的前缀。
 
 #### afk-tab-list-suffix
 需要 [`kick-if-idle`](#kick-if-idle) 设定为 `false`
 
 - **默认值**: ""
-- **描述**: 当某玩家处于挂机状态时在TAB玩家列表中显示的后缀。
+- **描述**: 当某玩家处于挂机状态时，在TAB玩家列表中显示的后缀。
 
 #### cannot-ride-mob
 需要拥有 [`allow.ride.<mob_id>`](../Permissions#allowridemob_id) 权限。
 
 - **默认值**: &lt;red>You cannot mount that mob
-- **描述**: 当某名玩家尝试骑乘不允许骑乘的生物时发送的消息。
+- **描述**: 当某名玩家尝试骑行不允许骑乘的生物时，发送的消息。
 
 #### dont-run-with-scissors
 需要启用 [`damage-if-sprinting`](#damage-if-sprinting) 选项。
 
 - **默认值**: &lt;red>&lt;italic>Don't run with scissors!
-- **描述**: 当玩家尝试拿着剪刀乱跑时在Actionbar显示的消息。
+- **描述**: 当玩家尝试拿着剪刀乱跑时在Actionbar提醒的消息。
 
 #### ping-command-output
 需要拥有 [`bukkit.command.ping`](../Permissions#bukkitcommandping) 权限。
@@ -316,10 +316,10 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
 #### death-message
 * ##### stonecutter
     - **默认值**: <player> has sawed themself in half
-    - **描述**: 因为玩家站在切石机上而导致死亡时显示的消息。
+    - **描述**: 若玩家站在切石机上而导致死亡时显示的消息。
 * ##### run-with-scissors
     - **默认值**: <player> slipped and fell on their shears
-    - **描述**: 因为玩家拿着剪刀到处乱跑而导致死亡时显示的消息。
+    - **描述**: 若玩家拿着剪刀到处乱跑而导致死亡时显示的消息。
 
 ### network
 ### kick-for-out-of-order-chat
@@ -330,7 +330,7 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
 - **描述**: 当服务器启动时是否要自动使用UPnP进行端口转发。
 ####  max-joins-per-second
 - **默认值**: false
-- **描述**: 设定为true令paper.yml文件中的`max-joins-per-tick`配置项将用每秒替代每Tick。
+- **描述**: 设定为 true 时，paper.yml配置文件中的`max-joins-per-tick`配置项使用每秒替代每Tick。
 	
 ### blocks
 
@@ -349,7 +349,7 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
         - minecraft:binding_curse
         - minecraft:vanishing_curse
         ```
-    - **描述**: 应该在砂轮中忽略移除哪些附魔。
+    - **描述**: 应该在砂轮中移除附魔时，应该忽略哪些附魔。
 * ##### remove-attributes
     - **默认值**: false
     - **描述**: 设定为true以允许砂轮移除物品属性。
@@ -409,13 +409,13 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
 
 ##### only-broadcast-to-affected-player
 - **默认值**: false
-- **描述**: 当完成某成就时是否只通知相关的玩家。
+- **描述**: 当完成某成就时，是否只通知相关的玩家。
 
 #### death
 
 ##### only-broadcast-to-affected-player
 - **默认值**: false
-- **描述**: 当玩家死亡时是否只通知相关的玩家。
+- **描述**: 当玩家死亡时，是否只通知相关的玩家。
 	
 ### logger
 
@@ -427,7 +427,7 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
 - **描述**: 是否要在控制台和日志中取消未知属性警告。
 #### suppress-unrecognized-recipe-errors
 - **默认值**: false
-- **描述**: Suppress warnings about attempts to load an unrecognized recipe是否要在控制台和日志中尝试加载无法识别的配方时取消警告。
+- **描述**: 是否要在控制台和日志中尝试加载无法识别的配方时取消警告。
 #### suppress-setblock-in-far-chunk-errors
 - **默认值**: false
 - **描述**: 当setBlock影响区块过远时是否要取消警告。
@@ -517,7 +517,7 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
 #### enchantment-table
 * ##### lapis-persists
     - **默认值**: false
-    - **描述**: 设定此值为 `true` 将将青金石保留在附魔台中，所以你大可放心的把青金石放到附魔台里面。
+    - **描述**: 设定此值为 `true` 即将青金石保留在附魔台中，所以你大可放心的把青金石放到附魔台里面。
 #### dragon_egg
 * ##### teleport
     - **默认值**: true
@@ -525,7 +525,7 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
 #### amethyst
 * ##### silk-touch
     - **默认值**: false
-    - **描述**: 当某物附魔了精准采集时是否会获得掉落物。
+    - **描述**: 当某物附魔了精准采集时开采是否会获得掉落物。
 #### observer
 * ##### disable-clock
     - **默认值**: false
@@ -595,7 +595,7 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
     - **描述**: 可以用于构建潮涌核心的方块。
 * ##### effect-distance
     - **默认值**: 16
-    - **描述**: 可见物品展示框中物品的生效距离。
+    - **描述**: 框架中每有七个物品时潮涌核心的生效距离。
 * ##### mob-damage
     * ###### distance
         - **默认值**: 8
@@ -647,7 +647,7 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
 #### sand
 * ##### fix-duping
     - **默认值**: true
-    - **描述**: 设定为 "false" 以重新启用刷沙。你可能还需要禁用 [`safe-teleporting`](#safe-teleporting)
+    - **描述**: 设定为 "false" 以启用刷沙。你可能还需要禁用 [`safe-teleporting`](#safe-teleporting)
 #### end_portal
 * ##### safe-teleporting
     - **默认值**: true
@@ -748,18 +748,18 @@ S  ·  ◈  ·  ◈  ·  ◈  ·  SW  ·  ◈  ·  ◈  ·  ◈  ·  W  ·  ◈ 
 
 > **注意**  
 > 践踏高度需要方块的高度或精确距离。在测试之中我们发现设定值和实际下落距离是不一致的。以下是测试结果：  
-        设定的值 -> 实际践踏所需的高度
-        1.0 -> 1.25
-        1.5 -> 1.75
-        2.0 -> 2.25
-        2.5 -> 2.87
-        3.0 -> 3.5
-        3.5 -> 4.25
-        4.0 -> 4.25
-        4.5 -> 5.0
-        5.0 -> 5.87
-        5.5 -> 5.87
->        6.0 -> 6.75
+        设定的值 -> 实际践踏所需的高度  
+        1.0 -> 1.25  
+        1.5 -> 1.75  
+        2.0 -> 2.25  
+        2.5 -> 2.87  
+        3.0 -> 3.5  
+        3.5 -> 4.25  
+        4.0 -> 4.25  
+        4.5 -> 5.0  
+        5.0 -> 5.87  
+        5.5 -> 5.87  
+>        6.0 -> 6.75  
 
 * ##### feather-fall-distance-affects-trampling
     - **默认值**: false
