@@ -1,7 +1,7 @@
 
 # Paper 全局配置
 
-Paper提供的全局配置选项将会应用于服务器上的每一个世界，或仅仅是更改服务器本身的工作方式。想要针对为每一个世界配置，请见[这里](https://docs.poikcue.com/#/PaperMC/Administration/Reference/world-configuration)。
+Paper提供的全局配置选项将应用于服务器上的每一个世界，或仅仅是更改服务器本身的工作方式。若想要为每一个世界进行配置，请见[这里](https://docs.poikcue.com/#/PaperMC/Administration/Reference/world-configuration)。
 
 ## async-chunks
 
@@ -41,19 +41,19 @@ Paper提供的全局配置选项将会应用于服务器上的每一个世界，
 
 - **默认值**: `500.0`
 
-- **描述**: 服务器每次处理加载区块的最大数值。如果此值超过了`player-max-concurrent-loads`，则覆盖它。
+- **描述**: 服务器每次处理加载区块的最大数值。若此值超过了`player-max-concurrent-loads`，则会覆盖它。
 
 ### max-concurrent-sends
 
 - **默认值**: `2`
 
-- **描述**: 每次排队发送区块的最大数值。较低的值会缓解服务器的网络瓶颈，比如使用反矿物透视和压缩。但是此值可能不会如预期地优化网络环境较差的玩家的游戏体验。
+- **描述**: 每次排队发送区块的最大数值。设定一个较低的值会缓解服务器的网络瓶颈，比如使用反矿物透视与压缩。但是此值可能不会如预期般优化网络环境较差的玩家的游戏体验。
 
 ### min-load-radius
 
 - **默认值**: `2`
 
-- **描述**: 在区块加载时，玩家周围未造成阻塞的范围（半径）。此值影响的实际范围是设定值 +1，并且此项会控制客户端可加载的区块数量。
+- **描述**: 在区块加载时，玩家周围区块未阻塞的范围（半径）。此值影响的实际范围是设定值 +1，并且此项会控制客户端可加载的区块数量。
 
 ### player-max-chunk-load-rate
 
@@ -119,7 +119,7 @@ Paper提供的全局配置选项将会应用于服务器上的每一个世界，
 
 - **默认值**: `true`
 
-- **描述**:  是否要在控制台启用 Mojang 的命令引擎 Brigadier 对命令高亮。
+- **描述**:  是否要在控制台启用 Mojang 的命令引擎 Brigadier 进行命令高亮。
 
 ### has-all-permissions
 
@@ -209,9 +209,9 @@ Paper提供的全局配置选项将会应用于服务器上的每一个世界，
 
 `I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.`
 
-> 中文参考翻译：`很抱歉，但是目前你的权限还不能使用此命令。如果你认为这是一个错误，请与服务器管理员联系。`
+> 中文参考翻译：`很抱歉，但是目前你的权限还不能使用此命令。如果你依然认为这是一个错误，请与服务器管理员联系。`
 
-- **描述**: 当玩家权限不足以运行某命令或进行某操作时提示的文本。插件可以为其新增的命令使用不同的提示文本。
+- **描述**: 当玩家运行某命令或进行某操作时，若权限不足所提示的文本。插件可以为其命令使用不同的提示文本。
 
 ### use-display-name-in-quit-messages
 
@@ -231,7 +231,7 @@ Paper提供的全局配置选项将会应用于服务器上的每一个世界，
 
 - **默认值**: `Connection throttled! Please wait before reconnecting.`
 
-- **默认值**: 当连接阻塞（即点击加入服务器按钮后极快速的断开连接并重新请求加入）时服务器发送给玩家的消息。可以在 `bukkit.yml` 配置。
+- **默认值**: 当连接阻塞（即点击加入服务器按钮后极快速的断开连接并重新请求加入）时服务器发送给玩家的消息。可以在 `bukkit.yml` 中配置。
 
 #### flying-player
 
