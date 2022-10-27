@@ -15,7 +15,7 @@ poikcue 对本作品进行翻译工作。
 我对Java了解不深，很多术语是请教Java大佬的。  
 如果有部分专业术语翻译的有误，请帮忙指出，谢谢。  
   
-部分术语我找了很多参考资料，我也不确定部分单词是不是术语，如果有任何错误请麻烦在 [GitHub Issue](https://github.com/poikcue/docs/issues/new) 留言或提交 [PR](https://github.com/poikcue/docs/pulls)。  
+部分术语我找了很多参考资料，我也不确定部分单词是不是术语，如果有任何错误请麻烦在 [GitHub Issue](https://github.com/poikcue/docs/issues/new) 留言或提交 [PR](https://github.com/poikcue/legacy-docs)。  
 
 ### 特别感谢
 **Kylepoops** - 部分Java术语建议和翻译。  
@@ -24,6 +24,7 @@ poikcue 对本作品进行翻译工作。
 *如果您发现任何拼写错误、Java术语错误及难以理解的翻译，请不要犹豫——立即在上方提供的 GitHub Issue 中反馈或提交PR！*  
 
 ## 更新日志
+- 2022/10/27 - 22:06 调整GitHub存储库链接。
 - 2022/10/20 - 22:10 根据原文档修正了翻译。
 - 2022/10/13 - 8:41 修正“Paper Plugin YML”和“Paper System Properties”部分翻译。
 - 2022/10/12 - 10:52 修正部分“安装或更新Java”的翻译。
