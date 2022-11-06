@@ -1,9 +1,9 @@
 # Paper Plugin YML
 
-plugin.yml文件是你的插件最主要的配置文件。
-包含你的插件最基本的信息，比如插件名，版本和简要描述。同时，也将包含加载插件的依赖，权限和命令。
+plugin.yml 文件是你的插件中最主要的配置文件。
+它包含了插件最基本的信息，比如插件名、版本和简要描述。它同时包括插件的依赖、权限和命令等。
 
-书接上回。plugin.yml文件存放在你的工程中的 `resources` 文件夹中，结构如下图所示：
+plugin.yml 文件存放在项目 `resources` 文件夹中，项目目录结构如下图所示：
 ```
 example-plugin
 ├── build.gradle.kts
@@ -31,8 +31,8 @@ api-version: 1.19
 
 ## 字段
 
-> 这部分所有内容的所有字段都没有特定顺序。  
-> 如果在它们的旁边有星号，即是必填项。
+> 本文所列出的字段并未按任何特定顺序排列。  
+> 如字段旁有星号 (\*) ，则其为必填项。
 
 
 ### name*
@@ -51,7 +51,7 @@ api-version: 1.19
 插件的主类。主类是一个插件中唯一继承 `JavaPlugin` 的类，并且是插件代码执行的入口。
 - `main: io.papermc.testplugin.ExamplePlugin`
 
-需要包含包的路径和主类的名字（不用带.java或者.kt）
+需要包含包的路径和主类的名字（不用带 .java 或者 .kt ）
 
 ### description
 
@@ -93,9 +93,9 @@ api-version: 1.19
 ### libraries
 
 > **警告**    
-> 这个功能目前违反maven central的服务条款 ( Term of Service ) 。但很有可能予以保留。
+> 这个功能目前违反 Maven 中央仓库 ( Maven Central ) 的服务条款 ( ToS ) 。但很有可能予以保留。
 
-列出插件的部分依赖项。服务端将会从 Maven 中央仓库 ( Maven Central) 下载所列依赖项，并单独添加入插件的 `classpath` 中。这样就无需再将依赖通过 `shade` 的方式打包进插件，也无需使用 `relocation` 来避免多个插件通过 `shade` 打包同一类库时由于依赖项版本不同而可能发生的冲突。
+列出插件的部分依赖项。服务端将会从 Maven 中央仓库下载所列依赖项，并单独加入各个插件的 `classpath` 中。这样就无需再将依赖通过 `shade` 的方式打包进插件，也无需使用 `relocation` 来避免多个插件通过 `shade` 打包同一类库时由于依赖项版本不同而可能发生的冲突。
 
 ```yaml
 libraries:
@@ -118,7 +118,7 @@ permissions :
         default: not op
 ```
 
-description是权限节点的描述。将会在权限列表中显示。default是权限节点的默认值，可以设为为 `op`/`not op`或`true`/`false`。此值默认是 `op`。    
+description是权限节点的描述。将会在权限列表中显示。default 是权限节点的默认值，可以设为为 `op` / `not op`或 `true` / `false`。此值默认是 `op`。    
 每个权限节点都可以有子权限。当设定为 `true` 时它将继承父权限。  
 
 ## Commands
