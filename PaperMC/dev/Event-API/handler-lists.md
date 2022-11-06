@@ -1,11 +1,11 @@
-# Handler 列表
+# HandlerList
 
-每个可以被监听的 `Event`（事件）都有一个 `HandlerList` 来包含所有的监听器与其监听的事件。    
-该列表常常用于在事件被调用时，同时调用监听器。  
+每个可以被监听的 `Event`（事件）都有一个 `HandlerList` 来存储所有监听该事件的监听器。    
+事件被触发的过程本质上是按照优先级顺序依次调用事件类的 `HandlerList` 中所存储的监听器。  
 
-## 为一个事件获取handler列表
+## 获取某一事件的 HandlerList
 
-要为一个事件获取handler列表，你可以在具体的事件类中调用 `getHandlerList()`。
+要获取某一事件的 HandlerList，可以对某个事件类调用静态方法 `getHandlerList()`。
 
 ```java
 public class ExampleListener implements Listener {
@@ -28,7 +28,7 @@ public class ExampleListener implements Listener {
 
 ## 注销一个监听器
 
-要注销一个监听器，你可以在监听器中注册的 `HandlerList` 中调用 `unregister()`。
+要注销一个监听器，你可以对监听器注册所在的 `HandlerList` 调用 `unregister()` 方法。
 
 ```java
 public class ExampleListener implements Listener {
@@ -43,7 +43,7 @@ public class ExampleListener implements Listener {
     // 或者：
     
     public ExampleListener() {
-        // 通过静态getter访问handler列表
+        // 通过静态 getter 访问 HandlerList
         HandlerList handlerList = PlayerJoinEvent.getHandlerList();
         handlerList.unregister(this);
         // 的确，这是一个愚蠢的例子...
@@ -51,5 +51,8 @@ public class ExampleListener implements Listener {
 }
 ```
 
-为了更易于使用，你可以在基于 `Listener` 或 `Plugin` 上进行注销。  
-而且，你也可以通过在 `HandlerList` 中调用 `unregisterAll()` 以注销某一特定事件中的所有监听器。  
+你也可以通过 `Listener` 或 `Plugin` 对象进行注销。
+
+译注：对于前者，将会注销某个 `Listener` 类内所有监听器方法。对于后者，将会注销某个插件所注册的全部事件监听器。
+
+你还可以对 `HandlerList` 对象调用 `unregisterAll()` 方法以注销监听某一事件的所有监听器。  
