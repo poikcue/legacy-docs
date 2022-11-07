@@ -1,6 +1,6 @@
 # 事件监听器
 
- `Events`（事件）是在游戏中监听某一特定行为发生的有效方式。它们可以被服务器，或插件，所触发。  
+ `Events`（事件）是在游戏中监听某一特定行为发生的有效方式。它们可以被服务器（或插件）触发。  
 例如某名玩家加入了服务器，抑或是某个方块被破坏时，都将触发对应事件。  
 插件能够触发自定义事件，例如玩家完成了某个插件自定义的任务，以供其它插件监听。  
 
@@ -35,8 +35,8 @@ public class ExampleListener implements Listener {
 }
 ```
 
-> 由于插件可以自定义事件，不可能列出一份包括所有可监听事件的列表。不过在[这里](https://jd.papermc.io/paper/1.19/org/bukkit/event/Event.html)可以了解 Paper 所提供的 `Event` 类的全部子类。  
-> 
+> 由于插件可以自定义事件，这里无法列出一份包括所有可监听事件的列表。不过在[这里](https://jd.papermc.io/paper/1.19/org/bukkit/event/Event.html)可以了解 Paper 所提供的 `Event` 类的全部子类。  
+>   
 > 仅有实现了静态 `getHandlerList` 方法的事件才能被监听。   
 
 ## 注册监听器
@@ -44,7 +44,7 @@ public class ExampleListener implements Listener {
 要注册监听器，你需要调用 `Bukkit.getPluginManager().registerEvents()` 并传入监听器类的实例和你的插件主类的实例。  
   
 这一方法将会注册监听器，并允许它监听事件。    
-这一方法通常写在你的插件主类的 `onEnable()` 方法中，此时监听器将在服务器开始计算游戏刻 (tick) 时注册。
+这一方法通常写在你的插件主类的 `onEnable()` 方法中，此时监听器将在服务器开始计算游戏刻 (tick) 时注册。  
 
 ```java
 public class ExamplePlugin extends JavaPlugin {
@@ -102,10 +102,10 @@ public class ExampleListener implements Listener {
 
 > 在你的插件取消某事件之前，请思考一下其它插件是否已经取消或更改了该事件。    
 > 请先检查事件的各个字段再进行修改！    
-
-上面的例子会取消事件，这意味着玩家无法加入到服务器中。当一个事件被取消后，其他监听器将继续按顺序被调用下去，除非某个监听器在 `@EventHandler` 注解中添加了 `ignoreCancelled = true` 以忽略已取消的事件。  
-
-如欲忽略已取消的事件，可以这样写：
+  
+上面的例子会取消事件，这意味着玩家无法加入到服务器中。当一个事件被取消后，其他监听器将继续按顺序被调用下去，除非某个监听器在 `@EventHandler` 注解中添加了 `ignoreCancelled = true` 以忽略已取消的事件。    
+  
+如欲忽略已取消的事件，可以这样写：  
 ```
 public class ExampleListener implements Listener {
 
