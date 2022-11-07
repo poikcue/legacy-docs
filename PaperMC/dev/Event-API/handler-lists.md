@@ -50,9 +50,10 @@ public class ExampleListener implements Listener {
     }
 }
 ```
-
-你也可以通过 `Listener` 或 `Plugin` 对象进行注销。
-
-译注：对于前者，将会注销某个 `Listener` 类内所有监听器方法。对于后者，将会注销某个插件所注册的全部事件监听器。
-
-你还可以对 `HandlerList` 对象调用 `unregisterAll()` 方法以注销监听某一事件的所有监听器。  
+ 
+为了便于使用，你也可以通过 `Listener` 或 `Plugin` 对象进行注销。  
+  
+译注：对于前者，将会注销某个 `Listener` 类内所有监听器方法。对于后者，将会注销某个插件所注册的全部事件监听器。  
+  
+你还可以对 `HandlerList` 对象调用 `unregisterAll()` 方法以注销监听某一事件的所有监听器。    
+  
