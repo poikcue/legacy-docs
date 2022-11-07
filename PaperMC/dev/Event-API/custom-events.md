@@ -6,10 +6,10 @@
 ## 创建一个自定义事件
 
 要创建一个自定义事件，你需要创建一个继承 `Event` 的类。每个事件都要求有一个 `HandlerList` 以存储所有监听该事件的监听器。  
-唯一一种例外情况是某个事件被有意设计为不可监听以便作其他事件的父类所用。比如 `BlockPistonEvent` 没有 `HandlerList`，所以不能被监听。
-HandlerList 用于在事件被触发时，调用所有的监听器。
+唯一一种例外情况是某个事件被有意设计为不可监听以便作其他事件的父类所用。比如 `BlockPistonEvent` 没有 `HandlerList`，所以不能被监听。  
+HandlerList 用于在事件被触发时，调用所有的监听器。  
 
-译注：不能直接监听“活塞事件”，但是可以监听“活塞推出事件”和“活塞收回事件”。同理，不能直接监听“玩家事件”，但可以监听“玩家加入事件”、“玩家退出事件”等等。 `BlockPistonEvent` 是一个抽象类，自然不会用于直接监听。即使其不是抽象类也不能用于直接监听。
+译注：虽然不能直接监听“活塞事件”，但是可以监听“活塞推出事件”和“活塞收回事件”。同理，尽管无法直接监听“玩家事件”，但是可以监听“玩家加入事件”、“玩家退出事件”等等。 `BlockPistonEvent` 是一个抽象类，自然不会用于直接监听。即使其不是抽象类也不能用于直接监听。
 
 > **关于`getHandlerList`的信息：**  
 > 尽管这一方法不是从 `Event` 类继承来的，你仍需要添加一个静态 `getHandlerList()` 方法并返回一个 `HandlerList`。  
@@ -32,7 +32,7 @@ public class PaperIsCoolEvent extends Event {
 ```
 
 既然已经创建好了我们的事件，我们现在可以为它添加许多功能啦！  
-比如我们想要在这个 `PaperIsCoolEvent` 事件被调用时，在服务器内发送一条广播。
+比如：我们想要在这个 `PaperIsCoolEvent` 事件被调用时，在服务器内发送一条广播。
 
 ```java
 public class PaperIsCoolEvent extends Event {
@@ -65,7 +65,7 @@ public class PaperIsCoolEvent extends Event {
 
 ## 调用事件
 
-既然我们已经创建好了这个事件。我们接下来可以触发它。  
+既然我们已经创建好了这个事件，我们接下来就可以触发它。  
 
 ```java
 public class ExamplePlugin extends JavaPlugin {
