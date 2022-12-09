@@ -1,10 +1,5 @@
 # Purpur 配置文件
 
-## 许可证
-本作品使用 [BSD-2-Clause license](https://github.com/PurpurMC/PurpurDocs/blob/main/LICENSE) 作为许可证。同时，本作品原作者与版权归属为 PurpurMC。  
-poikcue 对本作品进行翻译工作。  
-本 Purpur 配置文件原页面：https://purpurmc.org/docs/Configuration/  
-
 ## 说明
 本文将介绍由Purpur提供的、位于purpur.yml文件中所有的配置项。    
   
